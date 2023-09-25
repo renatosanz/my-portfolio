@@ -1,0 +1,20 @@
+.footer{
+  display: flex;
+  padding: 1rem;
+  height: 5vh;
+}
+.footer-cont{
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+}
+.footer-cont *{
+  margin: auto;
+}
+.footer section{
+  display: flex;
+  gap: 1rem;
+}
+#autor{
+  font-family: 'inter';
+}

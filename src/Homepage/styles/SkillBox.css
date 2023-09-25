@@ -1,0 +1,12 @@
+.skillBox{
+  background: #fff;
+  padding: 1rem;
+  display: flex;
+  border-radius: 1rem;
+  margin: auto;
+}
+.skillBox img{
+  margin: auto;
+  height: 8rem;
+  width: auto;
+}

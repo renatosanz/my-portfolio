@@ -1,0 +1,33 @@
+/*This is the light theme for my page*/
+
+.mode-light, 
+.mode-light #Navbar{
+  background: #d8d8d8;
+  color: #333333;
+}
+.mode-light a{
+  color: #333333;
+  text-decoration: none;
+}
+
+.mode-light  #links li,
+.mode-light #Clock-header, 
+.mode-light .footer, 
+.mode-light .skillBox,
+.mode-light .BlogCard-bg,
+.mode-light #tools{
+  background: #e6e6e6;
+}
+.mode-light  #links li:hover,
+.mode-light .gallery-item,
+.mode-light .BlogCard-tags li,
+.mode-light #Playground,
+.mode-light #toolList div,
+.mode-light #canva div{
+  background: #f3f3f3;
+}
+
+.mode-light .btn1:hover::after, 
+.mode-light #porcent{
+  background: #000;
+}

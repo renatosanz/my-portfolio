@@ -1,0 +1,12 @@
+#WhatIDo-cont{
+  display: flex;
+  flex-direction: column;
+}
+
+#dynamic-cont{
+  padding: 0;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 10;
+}

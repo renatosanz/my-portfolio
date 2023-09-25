@@ -1,0 +1,59 @@
+import React, {useState, useRef } from 'react'
+import {Navigate, Route, Routes, } from 'react-router-dom';
+
+import "./page/themeDark.css"
+import "./page/themeLight.css"
+
+import Navbar from './page/Navbar';
+import Description from './Homepage/Description';
+import WhatIDo from './Homepage/WhatIDo';
+import MyWork from './Homepage/MyWork';
+import AboutMe from './Homepage/AboutMe';
+import Footer from './page/Footer';
+import BlogList from './components_Blog/BlogList';
+import NotFound from './page/NotFound';
+import Blog from './components_Blog/Blog';
+import { dataBlog } from './constants/blogData';
+import Playground from './playground/Playground';
+
+export default function App() {
+  const [theme, setTheme] = useState('light');
+  const what_i_do = useRef(null);
+  const my_work = useRef(null);
+  const about_me = useRef(null);
+
+  const changeTheme=()=>{
+    if(theme==="dark"){
+      setTheme("light")
+    }else{
+      setTheme("dark")
+    }
+  }
+  return (
+    <div id='background' className={"mode-"+theme}>
+      <Navbar func={changeTheme} icon={theme}/>
+      <div id='cont-page'>
+        <Routes>
+            <Route index path='/home' element={
+              <>
+                <Description refs={{what_i_do,my_work,about_me}}/>
+                <WhatIDo selfRef={what_i_do}/>
+                <MyWork selfRef={my_work}/>
+                <AboutMe selfRef={about_me}/>
+              </>
+            }/>
+            <Route path='/blog//*' element={<BlogList/>}/>
+            <Route path='/playground' element={<Playground/>}/>
+            <Route  path='*' element={<NotFound/>}/>
+            {
+              dataBlog?.map((item,id)=>
+                <Route key={id} path={`/${item.src}`} element={<Blog src={item.src}/>}/>
+              )
+            }
+            <Route path="/" element={<Navigate replace to="/home" />} />
+        </Routes>
+      </div>
+      <Footer/>
+    </div>
+  )
+}

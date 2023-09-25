@@ -18,9 +18,7 @@ export default function Description({refs}) {
             <Button idButton={'about-me'} label={'Learn more about me.'} refDiv={refs.about_me}/>
           </section>
         </div>
-        <aside className='cont-my-image'>
-            <img style={{backgroundImage:'url(src/Homepage/img/my_photo-min.jpg)'}} src='src/Homepage/img/my_photo.jpg' id='my_image'></img>            
-        </aside>
+
       </section>
     </div>
   )

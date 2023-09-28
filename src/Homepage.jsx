@@ -50,7 +50,7 @@ export default function App() {
                 <Route key={id} path={`/${item.src}`} element={<Blog src={item.src}/>}/>
               )
             }
-            <Route path="/" element={<Navigate replace to="/home" />} />
+            
         </Routes>
       </div>
       <Footer/>

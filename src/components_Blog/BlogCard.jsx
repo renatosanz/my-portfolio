@@ -1,10 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './styles/BlogCard.css'
-import { Link } from 'react-router-dom'
 
-export default function BlogCard({title,datePub,tags,body,src,bgi=null}) {
+export default function BlogCard({title,datePub,tags,body,bgi=null}) {
   return (
-    <Link to={`/${src}`}>
       <li className='BlogCard-bg' style={bgi ? {backgroundImage:`url(${bgi})`,color:"#fff"}:{}}>
         <div className='BlogCard-blur' style={bgi ? {backdropFilter:"blur(20px) brightness(0.6)"}:{}}>
         <div className='BlogCard-header'>
@@ -25,6 +23,5 @@ export default function BlogCard({title,datePub,tags,body,src,bgi=null}) {
         </section>
         </div>
       </li>
-    </Link>
   )
 }

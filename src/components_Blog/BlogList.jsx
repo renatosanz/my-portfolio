@@ -20,7 +20,6 @@ export default function BlogContent() {
             tags={item.tags} 
             datePub={item.datePub} 
             body={item.data} 
-            src={item.src} 
             bgi={item.bgi}/>
           </div>
           )

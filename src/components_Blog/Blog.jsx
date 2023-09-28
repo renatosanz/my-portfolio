@@ -7,7 +7,7 @@ export default function Blog({ src }) {
 
   useEffect(() => {
     // Cargar el contenido de tu archivo Markdown utilizando una ruta relativa desde la raíz
-    fetch(`${process.env.PUBLIC_URL}/src/components_Blog/md/${src}.mdx`)
+    fetch(`${process.env.PUBLIC_URL}/md/${src}.mdx`)
       .then((response) => response.text())
       .then((data) => {
         setMarkdownContent(data);

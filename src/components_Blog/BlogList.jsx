@@ -25,7 +25,6 @@ export default function BlogContent() {
           )
         }
       </ul>
-      <Blog src={currentBlog.src}/>
     </section>
   )
 }

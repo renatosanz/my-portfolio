@@ -21,6 +21,6 @@ export const dataBlog = [
   "datePub": "1-9-2023",
   "tags": ["React", "Design", "Mobile"],
   "data": "Introducing our new web calculator - fast and intuitive!",
-  "bgi": "./components_Blog/imgbg/calcBG.png"
+  "bgi": "imgbg/calcBG.png"
 }
 ]

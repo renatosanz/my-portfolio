@@ -6,8 +6,8 @@ export default function Blog({ src }) {
   const [markdownContent, setMarkdownContent] = useState('');
 
   useEffect(() => {
-    // Cargar el contenido de tu archivo Markdown cuando src cambie
-    fetch(`src/components_Blog/md/${src}.mdx`)
+    // Cargar el contenido de tu archivo Markdown utilizando una ruta relativa desde la raíz
+    fetch(`${process.env.PUBLIC_URL}/src/components_Blog/md/${src}.mdx`)
       .then((response) => response.text())
       .then((data) => {
         setMarkdownContent(data);
@@ -15,8 +15,8 @@ export default function Blog({ src }) {
       .catch((error) => {
         console.error(error);
       });
-  }, [src]); // Observa cambios en la propiedad src
-
+  }, [src]);
+  
   return (
     <div className='Blog-Content'>
       <ReactMarkdown>{markdownContent}</ReactMarkdown>

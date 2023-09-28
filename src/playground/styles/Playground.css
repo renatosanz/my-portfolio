@@ -3,7 +3,7 @@
   display: flex;
   height: 500px;
   width: 1000px;
-  margin: auto;
+  margin: auto auto 3rem auto;
   border-radius: 1rem;
   padding: 1rem;
   justify-content: space-between;
@@ -53,4 +53,8 @@
 }
 #tools .input-color{
   border: none;
+}
+
+@media screen and (max-width:600px){
+  #Playground{display: none;}
 }

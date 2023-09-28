@@ -21,5 +21,6 @@
   #Blog-list{
     width: 100%;
     padding: 0%;
+    grid-template-columns: 1fr;
   }
 }

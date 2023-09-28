@@ -1,5 +1,5 @@
 import React, {useState, useRef } from 'react'
-import {Navigate, Route, Routes, } from 'react-router-dom';
+import {useNavigate, Route, Routes, } from 'react-router-dom';
 
 import "./page/themeDark.css"
 import "./page/themeLight.css"
@@ -29,6 +29,13 @@ export default function App() {
       setTheme("dark")
     }
   }
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/home')
+  }, [])
+
   return (
     <div id='background' className={"mode-"+theme}>
       <Navbar func={changeTheme} icon={theme}/>
@@ -44,7 +51,7 @@ export default function App() {
             }/>
             <Route path='/blog//*' element={<BlogList/>}/>
             <Route path='/playground' element={<Playground/>}/>
-            <Route  path='*' element={<NotFound/>}/>
+            <Route path='*' element={<NotFound/>}/>
             {
               dataBlog?.map((item,id)=>
                 <Route key={id} path={`/${item.src}`} element={<Blog src={item.src}/>}/>

@@ -10,8 +10,6 @@ import MyWork from './Homepage/MyWork';
 import AboutMe from './Homepage/AboutMe';
 import Footer from './page/Footer';
 import BlogList from './components_Blog/BlogList';
-import Blog from './components_Blog/Blog';
-import { dataBlog } from './constants/blogData';
 import Playground from './playground/Playground';
 
 export default function App() {

@@ -8,7 +8,7 @@ export default function Playground() {
   const [pencil, setpencil] = useState("pencil");
   const [lineW, setlineW] = useState(3);
   return (
-    <>
+    <div id='playground-cont'>
       <h1 style={{margin:'1rem auto',}}>Let's draw something!!!</h1>
       <div id='Playground'>
         <aside id='tools'>
@@ -30,6 +30,6 @@ export default function Playground() {
         </aside>
         <CanvasPanel currentColor={pencil == "erase" ? '#ffffff' : color} lineW={lineW}/>
       </div>
-    </>
+    </div>
   )
 }

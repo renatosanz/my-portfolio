@@ -55,6 +55,6 @@
   border: none;
 }
 
-@media screen and (max-width:600px){
-  #Playground{display: none;}
+@media screen and (max-width:1280px){
+  #playground-cont{display: none;}
 }

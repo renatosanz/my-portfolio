@@ -3,9 +3,9 @@ import "./styles/Description.css"
 import Button from './Button'
 import { Fade } from 'react-awesome-reveal'
 
-export default function Description({refs}) {
+export default function Description({refs,selfRef}) {
   return (
-    <div id='Description' >
+    <div id='Description' ref={selfRef}>
       <section className='header-Descripton'>
         <div className='cont-header'>
           <Fade className='label-group-description' cascade damping={0.1}>

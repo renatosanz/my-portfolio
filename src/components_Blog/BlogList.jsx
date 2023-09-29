@@ -3,9 +3,9 @@ import { dataBlog } from '../constants/blogData'
 import BlogCard from './BlogCard'
 import './styles/BlogList.css'
 
-export default function BlogContent() {
+export default function BlogContent({selfRef}) {
   return (
-    <section id='Blog-cont'>
+    <section id='Blog-cont' ref={selfRef}>
       <h1>Blog Posts</h1>
       <ul id='Blog-list'>
         {

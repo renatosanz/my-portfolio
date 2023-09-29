@@ -3,12 +3,25 @@ import "./Navbar.css"
 import DarkSVG from "./img/dark.svg";
 import LightSVG from "./img/light.svg";
 import Clock from './Clock';
-import { Link } from 'react-router-dom';
 
-export default function Navbar({func,icon}) {
+export default function Navbar({func,icon,refs}) {
   const [porcent, setPorcent] = useState(0);
 
-  const parts = ["home","blog","playground"]
+  const parts = [
+    {name:"home",ref:refs[0]},
+    {name:"blog",ref:refs[1]},
+    {name:"playground",ref:refs[2]}
+  ];
+
+  const handleClick = (refDiv) => {
+    const offset = refDiv.current.getBoundingClientRect().top + window.scrollY;
+    const newPosition = offset - window.innerHeight/10 ; // Agregar 10vh
+
+    window.scrollTo({
+      top: newPosition,
+      behavior: 'smooth',
+    });
+  };
 
   useEffect(() => {
     const funHeight = () =>{
@@ -18,6 +31,7 @@ export default function Navbar({func,icon}) {
       const positionPorcent = (currentPosition/(docH-windowH))*100;
       setPorcent(positionPorcent);
     }
+    console.log(parts)
     window.addEventListener("scroll",funHeight)
   
     return () => {
@@ -45,9 +59,7 @@ export default function Navbar({func,icon}) {
         <ul id='links'>
           {
             parts.map((item,index) =>(
-              <Link key={index} to={`/${item}`}>
-                <li className='clickable'>{item}</li>
-              </Link>
+                <li key={index} onClick={()=>{handleClick(item.ref)}} className='clickable'>{item.name}</li>
             ))
           }
         </ul>

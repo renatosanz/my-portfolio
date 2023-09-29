@@ -51,10 +51,8 @@
   height: 80%;
   margin: auto 2rem auto 0;
 }
-#links a{
+#links li{
   margin: auto;
-}
-#links a li{
   list-style-type: none;
   font-weight: 400;
   padding: 10px 15px;

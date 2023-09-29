@@ -3,12 +3,12 @@ import './styles/Playground.css'
 import CanvasPanel from './CanvasPanel'
 import { ToolList } from '../constants/listToolsPlayground'
 
-export default function Playground() {
+export default function Playground({selfRef}) {
   const [color, setColor] = useState("#000000");
   const [pencil, setpencil] = useState("pencil");
   const [lineW, setlineW] = useState(3);
   return (
-    <div id='playground-cont'>
+    <div id='playground-cont' ref={selfRef}>
       <h1 style={{margin:'1rem auto',}}>Let's draw something!!!</h1>
       <div id='Playground'>
         <aside id='tools'>

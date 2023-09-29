@@ -7,7 +7,7 @@ export default function Footer() {
       <div className='footer-cont'>
         <span>© Renato S. Loeza - Web developer · 2023</span>
         <section>
-          <a className='link' href="https://github.com/renatosanz" target="_blank" >
+          <a className='link' href="https://github.com/renatosanz/my-portfolio" target="_blank" >
             <i className="fa-2x  fa-solid fa-code"></i>
           </a>
           <a className='link' href="https://www.behance.net/renorenato" target="_blank">

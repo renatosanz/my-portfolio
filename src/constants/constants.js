@@ -1,19 +1,14 @@
-import html_svg from "../Homepage/img/html.svg"
-import CSS_svg from "../Homepage/img/css.svg"
-import JS_svg from "../Homepage/img/js.svg"
-import Git_svg from "../Homepage/img/git.svg"
-import React_svg from "../Homepage/img/react.svg"
-import Vite_svg from "../Homepage/img/vite.svg"
-import Node_svg from "../Homepage/img/node.svg"
 
 export const mySkills = [
-  {name:"HTML5",src_img:html_svg},
-  {name:"CSS",src_img:CSS_svg},
-  {name:"JS",src_img:JS_svg},
-  {name:"Git",src_img:Git_svg},
-  {name:"React-JS",src_img:React_svg},
-  {name:"Vite",src_img:Vite_svg},
-  {name:"Node-JS",src_img:Node_svg},
+  {name:"Python",src_img:"https://img.icons8.com/?size=100&id=13441&format=png&color=000000"},
+  {name:"Lua",src_img:"https://img.icons8.com/?size=100&id=utx96pPa33XK&format=png&color=000000"},
+  {name:"HTML5",src_img:"https://img.icons8.com/?size=100&id=20909&format=png&color=000000"},
+  {name:"CSS",src_img:"https://img.icons8.com/?size=100&id=21278&format=png&color=000000"},
+  {name:"JS",src_img:"https://img.icons8.com/?size=100&id=108784&format=png&color=000000"},
+  {name:"Node-JS",src_img:"https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000"},
+  {name:"Git",src_img:"https://img.icons8.com/?size=100&id=20906&format=png&color=000000"},
+  {name:"React-JS",src_img:"https://img.icons8.com/?size=100&id=123603&format=png&color=000000"},
+  {name:"AstroJS",src_img:"https://img.icons8.com/?size=100&id=kXuRhjMIeKhk&format=png&color=000000"},
 ] 
 
  const calc = {

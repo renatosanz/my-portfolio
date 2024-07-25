@@ -1,26 +1,41 @@
-import React from 'react'
-import './Footer.css'
+import React from "react";
+import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer className='footer'>
-      <div className='footer-cont'>
+    <footer className="footer">
+      <div className="footer-cont">
         <span>© Renato S. Loeza - Web developer · 2023</span>
         <section>
-          <a className='link' href="https://github.com/renatosanz/my-portfolio" target="_blank" >
-            <i className="fa-2x  fa-solid fa-code"></i>
+          <a
+            href="https://github.com/renatosanz"
+            class="social-links__entry"
+            target="_blank"
+          >
+            <span>
+              <i class="fa-brands fa-2x fa-github-alt"></i>
+            </span>
           </a>
-          <a className='link' href="https://www.behance.net/renorenato" target="_blank">
-            <i className="fa-2x  fa-brands fa-behance"></i>
+          <a
+            href="https://x.com/riprtx"
+            class="social-links__entry"
+            target="_blank"
+          >
+            <span>
+              <i class="fa-brands fa-2x fa-square-twitter"></i>
+            </span>
           </a>
-          <a href="https://www.linkedin.com/in/s%C3%A1nchez-loeza-renato-2326a6205/" target="_blank">
-            <i className="fa-2x  fa-brands fa-linkedin"></i>
-          </a>
-          <a className='link' href="https://github.com/renatosanz" target="_blank">
-            <i className="fa-2x  fa-brands fa-github"></i>
+          <a
+            href="https://www.behance.net/riprtx"
+            class="social-links__entry"
+            target="_blank"
+          >
+            <span>
+              <i class="fa-brands fa-2x fa-square-behance"></i>
+            </span>
           </a>
         </section>
       </div>
     </footer>
-  )
+  );
 }

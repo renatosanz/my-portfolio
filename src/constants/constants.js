@@ -72,12 +72,12 @@ const riprtx = {
   repository: "https://github.com/renatosanz/riprtx",
 };
 const InterVisor = {
-  url: "https://github.com/renatosanz/delfin",
+  url: "https://intervisor.netlify.app/",
   bgColor: "#427b58",
   fontColor: "#fefefe",
   title: "InterVisor",
   icon: "https://img.icons8.com/?size=100&id=64353&format=png&color=000000",
-  repository: "https://github.com/renatosanz/delfin",
+  repository: "https://github.com/renatosanz/InterVisor",
 };
 
 const textAnalyzer = {

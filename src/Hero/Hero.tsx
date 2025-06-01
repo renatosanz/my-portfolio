@@ -3,6 +3,7 @@ import "./Hero.css";
 import MyPhotoLarge from "../imgs/img-large.png";
 import Deco1 from "../svg/idk1.svg";
 import Deco2 from "../svg/idk2.svg";
+import Star from "../svg/lil_star.svg";
 
 import { ColorScheme } from "../utils/colors";
 
@@ -11,7 +12,6 @@ interface HeroProps {
 }
 
 export default function Hero({ colorScheme }: HeroProps) {
-  const heightDecorators = 240;
   const genRandomPosition = () => {
     var offsetWidth = window.innerWidth * 0.5;
     var offsetHeight = window.innerHeight * 0.5;
@@ -64,12 +64,18 @@ export default function Hero({ colorScheme }: HeroProps) {
         id="hero-section"
         style={{ backgroundColor: colorScheme.bg_color_2 + "4F" }}
       >
-
         <div className="description-side">
           <div>
             <h1>Renato Sanchez</h1>
             <h2>Software Developer</h2>
             <h3>I build things for the web and more.</h3>
+            <button
+              id="download-resume"
+              style={{ backgroundColor: colorScheme.bg_color_3 }}
+            >
+              <p>My Resume</p>
+              <img src={Star} className="lil_star" />
+            </button>
           </div>
         </div>
         <div className="photo-side">

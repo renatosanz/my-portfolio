@@ -65,7 +65,14 @@ export default function Navbar({ colorScheme, toggleThemeFunc }: NavbarProps) {
             ))}
           </ul>
           <div id="sandwich-icon">
-            <img src={MenuIcon} style={{ color: colorScheme.fg_color }} />
+            <img
+              src={MenuIcon}
+              style={
+                colorScheme.name === "dark"
+                  ? { filter: " invert(2)", transition: "0.3s" }
+                  : { transition: "0.3s" }
+              }
+            />
           </div>
           <div id="themeSwitch" className="clickable">
             <img

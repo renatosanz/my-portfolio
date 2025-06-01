@@ -12,6 +12,7 @@ import {
 import { useState } from "react";
 import Hero from "../Hero/Hero";
 import About from "../About/About";
+import Projects from "../Projects/Projects";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState<Boolean>(true);
@@ -59,6 +60,10 @@ export default function Home() {
                 <Route
                   path="/about"
                   element={<About colorScheme={colorScheme} />}
+                />
+                <Route
+                  path="/projects"
+                  element={<Projects colorScheme={colorScheme} />}
                 />
               </Routes>
             </main>

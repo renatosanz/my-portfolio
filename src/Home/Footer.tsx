@@ -33,7 +33,7 @@ export default function Footer({ colorscheme }: FooterProps) {
           <ul>
             {my_socials.map((l) => (
               <li>
-                <a href={l.link} style={{ color: colorscheme.fg_color }}>
+                <a href={l.link} style={{ color: colorscheme.fg_color }} target="_blank">
                   {l.name}
                 </a>
               </li>

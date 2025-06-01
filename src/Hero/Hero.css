@@ -1,0 +1,99 @@
+.hero-section-wrap {
+  height: 100%;
+  overflow: hidden;
+  clip-path: inset(0);
+}
+
+#hero-section {
+  display: flex;
+  height: 100%;
+  gap: 1rem;
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+}
+
+.photo-side {
+  z-index: 200;
+  display: flex;
+  margin: auto;
+  margin-left: 0;
+}
+.photo-side div {
+  margin: auto;
+  margin-left: 0;
+}
+#my-photo-large {
+  width: 20rem;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+.description-side {
+  z-index: 200;
+  display: flex;
+  margin: auto;
+  margin-right: 0;
+  text-align: right;
+}
+.description-side div {
+  margin: auto;
+  margin-right: 0;
+}
+.description-side span {
+  display: flex;
+}
+.description-side h1 {
+  font-size: 5rem;
+  margin: 0;
+  letter-spacing: -0.4rem;
+}
+.description-side h2 {
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: -0.15rem;
+}
+.description-side h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.12rem;
+}
+
+.decos {
+  position: absolute;
+  object-fit: cover;
+  width: 20rem;
+  z-index: 0;
+  transition: 1s;
+}
+
+@media screen and (max-width: 612px) {
+.hero-section-wrap {
+  height: auto;
+}
+  #hero-section {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  .description-side {
+    text-align: center;
+    margin: auto;
+  }
+  .photo-side {
+    margin: auto;
+  }
+  .description-side h1 {
+    font-size: 3rem;
+    letter-spacing: -0.2rem;
+  }
+  .description-side h2 {
+    font-size: 2rem;
+    letter-spacing: -0.1rem;
+  }
+  .description-side h3 {
+    font-size: 1rem;
+    letter-spacing: -0.05rem;
+  }
+  .decos {
+    width: 120px;
+  }
+}

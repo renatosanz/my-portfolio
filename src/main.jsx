@@ -1,11 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Homepage from './Homepage.jsx'
-import './index.css'
-import { BrowserRouter } from 'react-router-dom'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Home from "./Home/Home";
+import "./index.css";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
-      <Homepage />
-    </BrowserRouter>
-)
+ReactDOM.createRoot(document.getElementById("root")).render(<Home />);

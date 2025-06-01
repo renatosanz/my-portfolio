@@ -1,0 +1,74 @@
+#Clock {
+  display: flex;
+}
+.Clock-label {
+  display: block;
+  width: 0;
+  margin: auto;
+  height: 0;
+  opacity: 0;
+  transition: 0.2s;
+}
+.fade-in-out {
+  animation: fluid-animation 5s ease-in-out forwards;
+}
+
+#label {
+  margin: auto;
+}
+
+@keyframes fluid-animation {
+  0% {
+    opacity: 0;
+
+    width: 0;
+    height: 0;
+  }
+  10% {
+    opacity: 0;
+    height: 20px;
+    width: 130px;
+  }
+  15% {
+    opacity: 1;
+    height: 20px;
+    width: 130px;
+  }
+  30% {
+    opacity: 1;
+    height: 20px;
+    width: 130px;
+  }
+  85% {
+    opacity: 1;
+    height: 20px;
+    width: 130px;
+  }
+  90% {
+    opacity: 0;
+    height: 20px;
+    width: 130px;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#Clock-container {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  transition: 0.3s;
+  border-radius: 1rem;
+  margin: auto;
+}

@@ -1,0 +1,74 @@
+.nav-external-container {
+  height: 4rem;
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+}
+header {
+  display: flex;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  border-radius: 1rem;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+nav,
+nav ul {
+  display: flex;
+}
+nav ul {
+  padding-left: 0;
+  list-style: none;
+  font-style: none;
+  text-decoration: none;
+  gap: 1rem;
+}
+
+#my-brand * {
+  margin: auto;
+}
+#my-photo {
+  margin: auto 0;
+  border-radius: 100%;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  animation: fade-in 0.3s ease-in-out 0.5s forwards;
+}
+
+#sandwich-icon {
+  display: none;
+}
+@media screen and (max-width: 612px) {
+  nav ul * {
+    display: none;
+  }
+  #sandwich-icon {
+    display: flex;
+  }
+  #sandwich-icon img {
+    width: 3rem;
+  }
+}
+
+#themeSwitch{
+  cursor: pointer;
+  padding-left: 1rem;
+  display: flex;
+}
+#themeSwitch img{
+  width: 2rem;
+  margin: auto;
+}
+#themeSwitch img:hover{
+  transform: scale(1.1) rotateZ(-10deg);
+}

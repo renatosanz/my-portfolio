@@ -4,5 +4,10 @@
 }
 
 body{
-  background: #000;
+  background: #F6FCDF;
+}
+@media (prefers-color-scheme: dark) {
+  body{
+    background: #1A1A19;
+  }
 }

@@ -15,13 +15,22 @@ import About from "../About/About";
 import Projects from "../Projects/Projects";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState<Boolean>(true);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
   const [colorScheme, setColorScheme] =
-    useState<ColorScheme>(dark_color_scheme);
+    useState<ColorScheme>(light_color_scheme);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
+
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setDarkMode(true);
+      setColorScheme(dark_color_scheme);
+    }
+
     setTimeout(() => {
       setLoading(false);
     }, 2000);

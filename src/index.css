@@ -1,13 +1,24 @@
-*{
-  font-family: 'Inter';
-  letter-spacing: -1px; 
+/* CSS */
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
 }
 
-body{
-  background: #F6FCDF;
+* {
+  font-family: "Inter";
+  letter-spacing: -1px;
+}
+
+body {
+  background: #f6fcdf;
 }
 @media (prefers-color-scheme: dark) {
-  body{
-    background: #1A1A19;
+  body {
+    background: #1a1a19;
   }
 }

@@ -1,7 +1,8 @@
 #About {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 20rem 1fr;
   grid-gap: 1rem;
+  margin: 0 10dvw;
 }
 
 .text-side {
@@ -25,11 +26,23 @@
 .gallery-item p {
   margin-top: 0;
 }
+
+@media screen and (max-width: 880px) {
+  #About{
+    margin: 0 2dvw;
+  }
+}
+
 @media screen and (max-width: 680px) {
   #About {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
+    margin: 0;
   }
+  .text-side {
+    max-width: none;
+  }
+
   .gallery-item * {
     width: 100%;
   }

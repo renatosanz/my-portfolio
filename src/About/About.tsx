@@ -22,7 +22,7 @@ export default function About({ colorScheme }: AboutProps) {
     {
       image: DelfinIMG,
       description:
-        "End of my virtual instance on the Delfín Program (Scientific Research) at UAS",
+        "end of my virtual instance on the Delfín Program (Scientific Research) at UAS",
     },
     {
       image: Origami1,
@@ -35,7 +35,7 @@ export default function About({ colorScheme }: AboutProps) {
     {
       image: Hackathon,
       description:
-        "my first hackathon I participate with friends (Nintendo DS photo)",
+        "my first hackathon I participated in with friends (Nintendo DS photo)",
     },
     {
       image: Origami3,

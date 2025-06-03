@@ -86,7 +86,7 @@ export const light_color_scheme: ColorScheme = {
   fg_color_3: colors.dm_dark_400,
   bg_color: "#FFFDF6",
   bg_color_1: "#DDEB9D",
-  bg_color_2: '#DDEB9D',
+  bg_color_2: '#c6c677',
   bg_color_3: "#A0C878",
 
   blue_bg: colors.blue_400,

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import MyPhotoLarge from "../imgs/img-large.png";
+import MyPhotoLarge from "../imgs/img-large.webp";
 import Deco1 from "../svg/idk1.svg";
 import Deco2 from "../svg/idk2.svg";
 import Star from "../svg/lil_star.svg";

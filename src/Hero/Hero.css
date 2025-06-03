@@ -67,7 +67,8 @@
 }
 
 #download-resume {
-  display: flex;
+  /*display: flex;*/
+  display: none;
   cursor: pointer;
   border: none;
   border-radius: 0.5rem;

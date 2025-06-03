@@ -9,7 +9,7 @@ interface ProjectsProps {
 }
 
 export default function Projects({ colorScheme }: ProjectsProps) {
-  const years = Array.from(new Set(myProjects.map((p) => p.year)));
+  const years = Array.from(new Set(myProjects.map((p) => p.year))).sort((y1,y2)=>y2-y1);
 
   const projectsByYearGroup = years.map((y) => ({
     year: y,

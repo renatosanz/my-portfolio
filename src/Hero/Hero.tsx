@@ -28,6 +28,8 @@ export default function Hero({ colorScheme }: HeroProps) {
       };
     }
   };
+
+  const downloadResume = () => window.open("/resume.pdf", "_self");
   return (
     <div className="hero-section-wrap">
       <img
@@ -72,6 +74,7 @@ export default function Hero({ colorScheme }: HeroProps) {
             <button
               id="download-resume"
               style={{ backgroundColor: colorScheme.bg_color_3 }}
+              onClick={downloadResume}
             >
               <p>My Resume</p>
               <img src={Star} className="lil_star" />

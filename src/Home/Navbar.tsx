@@ -132,7 +132,8 @@ const MobileMenu = ({
   return (
     <div className="external-container-mobile-menu">
       <nav
-        id={isToggleDisplayed ? "mobile-menu" : "mobile-menu-expanded"}
+        id={"mobile-menu"}
+        className={isToggleDisplayed ? "" : "expanded"}
         style={{ backgroundColor: colorScheme.bg_color }}
       >
         {links.map((section) => (

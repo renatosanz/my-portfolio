@@ -31,9 +31,9 @@ export default function Home() {
       setColorScheme(dark_color_scheme);
     }
 
-    setTimeout(() => {
+    setTimeout(async () => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   const toggleThemeFunc = () => {

@@ -13,7 +13,7 @@ interface HeroProps {
 }
 
 export default function Hero({ colorScheme }: HeroProps) {
-  const [modalOpen, setModalOpen] = useState<boolean>(true);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
 
   const genRandomPosition = () => {
     var offsetWidth = window.innerWidth * 0.5;

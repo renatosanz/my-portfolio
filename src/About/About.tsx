@@ -7,6 +7,7 @@ import Origami2 from "../imgs/origami2.webp";
 import Origami3 from "../imgs/origami3.webp";
 import Processing from "../imgs/processing.webp";
 import Hackathon from "../imgs/hackathon.jpg";
+import Hackathon2 from "../imgs/second_hack.webp";
 
 interface AboutProps {
   colorScheme: ColorScheme;
@@ -36,6 +37,11 @@ export default function About({ colorScheme }: AboutProps) {
       image: Hackathon,
       description:
         "my first hackathon I participated in with friends (Nintendo DS photo)",
+    },
+    {
+      image: Hackathon2,
+      description:
+        "my second hackathon, my team developed a web/Android streaming app for independent filmmakers in ARPA/BUAP.",
     },
     {
       image: Origami3,

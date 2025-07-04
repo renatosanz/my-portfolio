@@ -30,6 +30,14 @@ export default function Hero({ colorScheme }: HeroProps) {
   };
 
   const downloadResume = () => window.open("/resume.pdf", "_self");
+  const open_whatsapp_contact = () => {
+    const whatsapp_number = "522212783296";
+    const text = encodeURIComponent(
+      "Hi! I was looking at your web portfolio and I'm interested. Let's talk :)"
+    );
+    window.open(`https://wa.me/${whatsapp_number}?text=${text}`, "_blank");
+  };
+
   return (
     <div className="hero-section-wrap">
       <img
@@ -71,14 +79,30 @@ export default function Hero({ colorScheme }: HeroProps) {
             <h1>Renato Sanchez</h1>
             <h2>Software Developer</h2>
             <h3>I build things for the web and more.</h3>
-            <button
-              id="download-resume"
-              style={{ backgroundColor: colorScheme.bg_color_3 }}
-              onClick={downloadResume}
-            >
-              <p>My Resume</p>
-              <img src={Star} className="lil_star" />
-            </button>
+            <div style={{ display: "flex", gap: "1rem" }}>
+              <button
+                id="download-resume"
+                className="info_btn"
+                style={{ backgroundColor: colorScheme.bg_color_3 }}
+                onClick={downloadResume}
+              >
+                <p>My Resume</p>
+                <img src={Star} className="btn_icon lil_star" />
+              </button>
+              <button
+                id="contact-whatsapp"
+                className="info_btn"
+                style={{ backgroundColor: colorScheme.bg_color_3 }}
+                onClick={open_whatsapp_contact}
+              >
+                <p>Contact me!</p>
+                <img
+                  src="https://www.svgrepo.com/show/303147/whatsapp-icon-logo.svg"
+                  alt="contact me on Whatsapp 🤗"
+                  className="btn_icon"
+                />
+              </button>
+            </div>
           </div>
         </div>
         <div className="photo-side">

@@ -66,22 +66,30 @@
   transition: 1s;
 }
 
-#download-resume {
-  display: flex;
+.info_btn {
   cursor: pointer;
   border: none;
   border-radius: 0.5rem;
-  margin: 1rem auto auto auto;
   padding: 0.5rem;
+  display: flex;
   gap: 0.3rem;
-  margin-bottom: 1rem;
 }
-#download-resume * {
+.info_btn * {
   margin: auto;
 }
 
-.lil_star {
+#download-resume {
+  margin: 1rem 0 auto auto;
+}
+
+#contact-whatsapp {
+  margin: 1rem auto auto 0;
+}
+
+.btn_icon {
   width: 1.5rem;
+}
+.lil_star {
   animation: spin-anim 5s linear infinite;
 }
 

@@ -88,7 +88,7 @@
 .lil_star {
   animation: spin-anim 5s linear infinite;
 }
-.bottom-content-hero{
+.bottom-content-hero {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -176,5 +176,8 @@
   }
   .modal-content {
     width: 60%;
+  }
+  .bottom-content-hero {
+    justify-content: center;
   }
 }

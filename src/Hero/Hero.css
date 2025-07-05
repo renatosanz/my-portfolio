@@ -72,7 +72,7 @@
   padding: 0.5rem;
   display: flex;
   gap: 0.3rem;
-  margin: auto;
+  margin: auto 0.5rem;
   margin-top: 1rem;
 }
 .info_btn * {
@@ -87,6 +87,11 @@
 }
 .lil_star {
   animation: spin-anim 5s linear infinite;
+}
+.bottom-content-hero{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 @keyframes spin-anim {

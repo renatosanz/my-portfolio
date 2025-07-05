@@ -81,14 +81,14 @@ export default function Hero({ colorScheme }: HeroProps) {
               <h1>Renato Sanchez</h1>
               <h2>Software Developer</h2>
               <h3>I build things for the web and more.</h3>
-              <div style={{ display: "flex", gap: "1rem" }}>
+              <div className="bottom-content-hero">
                 <button
                   id="download-resume"
                   className="info_btn"
                   style={{ backgroundColor: colorScheme.bg_color_3 }}
                   onClick={downloadResume}
                 >
-                  <p>my Resume</p>
+                  <p>my resume</p>
                   <img
                     src={Star}
                     className="lil_star"
@@ -101,7 +101,12 @@ export default function Hero({ colorScheme }: HeroProps) {
                   style={{ backgroundColor: colorScheme.bg_color_3 }}
                   onClick={toggleOpenModal}
                 >
-                  let's talk!
+                  <p>let's talk!</p>
+                  <img
+                    src={Star}
+                    className="lil_star"
+                    style={{ width: "1.5rem" }}
+                  />
                 </button>
               </div>
             </div>

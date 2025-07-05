@@ -22,7 +22,9 @@ export default function Home() {
 
   useEffect(() => {
     setLoading(true);
-
+    setTimeout(async () => {
+      setLoading(false);
+    }, 1000);
     if (
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -30,10 +32,6 @@ export default function Home() {
       setDarkMode(true);
       setColorScheme(dark_color_scheme);
     }
-
-    setTimeout(async () => {
-      setLoading(false);
-    }, 1000);
   }, []);
 
   const toggleThemeFunc = () => {

@@ -6,7 +6,7 @@ import Deco2 from "../svg/idk2.svg";
 import Star from "../svg/lil_star.svg";
 
 import { ColorScheme } from "../utils/colors";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface HeroProps {
   colorScheme: ColorScheme;
@@ -14,6 +14,9 @@ interface HeroProps {
 
 export default function Hero({ colorScheme }: HeroProps) {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [decoPositions, setDecoPositions] = useState<
+    Array<{ top: string; left: string; rotate: string }>
+  >([]);
 
   const genRandomPosition = () => {
     var offsetWidth = window.innerWidth * 0.5;
@@ -28,9 +31,17 @@ export default function Hero({ colorScheme }: HeroProps) {
       return {
         top: "0px",
         left: "0px",
+        rotate: "0deg",
       };
     }
   };
+
+  useEffect(() => {
+    const positions = Array(6)
+      .fill(null)
+      .map(() => genRandomPosition());
+    setDecoPositions(positions);
+  }, [colorScheme]);
 
   const downloadResume = () => window.open("/resume.pdf", "_self");
   const open_whatsapp_contact = () => {
@@ -53,36 +64,14 @@ export default function Hero({ colorScheme }: HeroProps) {
   return (
     <>
       <div className="hero-section-wrap">
-        <img
-          src={colorScheme.name == "light" ? Deco1 : Deco2}
-          className="decos"
-          style={genRandomPosition()}
-        />
-        <img
-          src={colorScheme.name == "light" ? Deco1 : Deco2}
-          className="decos"
-          style={genRandomPosition()}
-        />
-        <img
-          src={colorScheme.name == "light" ? Deco1 : Deco2}
-          className="decos"
-          style={genRandomPosition()}
-        />
-        <img
-          src={colorScheme.name == "light" ? Deco1 : Deco2}
-          className="decos"
-          style={genRandomPosition()}
-        />
-        <img
-          src={colorScheme.name == "light" ? Deco1 : Deco2}
-          className="decos"
-          style={genRandomPosition()}
-        />
-        <img
-          src={colorScheme.name == "light" ? Deco1 : Deco2}
-          className="decos"
-          style={genRandomPosition()}
-        />
+        {decoPositions.map((position, index) => (
+          <img
+            key={index}
+            src={colorScheme.name == "light" ? Deco1 : Deco2}
+            className="decos"
+            style={position}
+          />
+        ))}
         <section
           id="hero-section"
           style={{ backgroundColor: colorScheme.bg_color_2 + "4F" }}
